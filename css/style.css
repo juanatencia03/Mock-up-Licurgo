@@ -2,10 +2,12 @@
   --bg-dark: #121417;
   --bg-card: #1c1f24;
   --bg-card-hover: #262a30;
-  --accent-gold: #ff9f1c;
-  --accent-hover: #e08b15;
+  --accent-burgundy: #ad0111;
+  --accent-hover: #8f000e;
   --text-muted: #9aa0a6;
   --border-color: #2e333d;
+  --bs-warning: var(--accent-burgundy);
+  --bs-warning-rgb: 173, 1, 17;
 }
 
 body {
@@ -23,17 +25,21 @@ body {
   border-bottom: 1px solid var(--border-color);
 }
 
-.brand-title {
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  color: #fff;
-  text-transform: uppercase;
+.brand-logo {
+  width: 160px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.brand-logo-main {
+  width: min(300px, 80vw);
+  height: auto;
 }
 
 .brand-badge {
   font-size: 0.75rem;
-  background-color: var(--accent-gold);
-  color: #121417;
+  background-color: var(--accent-burgundy);
+  color: #fff;
   font-weight: 700;
   border-radius: 4px;
   padding: 2px 6px;
@@ -49,21 +55,35 @@ body {
 }
 
 .custom-card:hover {
-  border-color: var(--accent-gold);
+  border-color: var(--accent-burgundy);
   transform: translateY(-3px);
 }
 
 /* Botones con estilo de la marca */
 .btn-gold {
-  background-color: var(--accent-gold);
-  color: #121417;
+  background-color: var(--accent-burgundy);
+  color: #fff;
   font-weight: 600;
   border: none;
 }
 
 .btn-gold:hover {
   background-color: var(--accent-hover);
-  color: #000;
+  color: #fff;
+}
+
+.btn-outline-warning {
+  --bs-btn-color: var(--accent-burgundy);
+  --bs-btn-border-color: var(--accent-burgundy);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--accent-burgundy);
+  --bs-btn-hover-border-color: var(--accent-burgundy);
+  --bs-btn-focus-shadow-rgb: 173, 1, 17;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--accent-hover);
+  --bs-btn-active-border-color: var(--accent-hover);
+  --bs-btn-disabled-color: var(--accent-burgundy);
+  --bs-btn-disabled-border-color: var(--accent-burgundy);
 }
 
 /* Checklist para alumno estilo Notas */
@@ -76,7 +96,12 @@ body {
   border-bottom: none;
 }
 
+.form-check .form-check-input {
+  margin-left: 0em;
+}
+
 .form-check-input:checked {
-  background-color: var(--accent-gold);
-  border-color: var(--accent-gold);
+  background-color: var(--accent-burgundy);
+  border-color: var(--accent-burgundy);
+
 }

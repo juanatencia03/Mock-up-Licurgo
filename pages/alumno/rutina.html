@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi Rutina - Licurgo Calistenia</title>
+    <title>Mi Rutina - Selección de Días - Licurgo Calistenia</title>
     <!-- Bootstrap 5 CSS e Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -14,9 +14,26 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../../css/style.css" />
+    <style>
+      .day-card {
+        transition:
+          transform 0.15s ease,
+          border-color 0.15s ease;
+        text-decoration: none;
+        display: block;
+      }
+      .day-card:hover {
+        transform: translateY(-2px);
+        border-color: var(--accent-burgundy);
+      }
+      .card-completed {
+        border-color: #198754 !important;
+        background: linear-gradient(145deg, #1c1f24, #142419);
+      }
+    </style>
   </head>
   <body>
-    <!-- Navbar: El logo vuelve al selector de roles -->
+    <!-- Navbar: Click en el logo vuelve a la raíz -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
       <div class="container-fluid px-3">
         <a
@@ -24,8 +41,11 @@
           href="../../index.html"
           title="Volver al Selector de Roles"
         >
-          <i class="bi bi-shield-shaded text-warning fs-4 me-2"></i>
-          <span class="brand-title">LICURGO</span>
+          <img
+            src="../../img/LicurgoLogo.png"
+            class="brand-logo"
+            alt="Licurgo Fitness"
+          />
           <span class="brand-badge">ALUMNO</span>
         </a>
         <button
@@ -55,141 +75,141 @@
     </nav>
 
     <main class="container py-4" style="max-width: 650px">
-      <!-- Encabezado de Sesión Activa -->
-      <div class="d-flex justify-content-between align-items-center mb-4">
+      <!-- Encabezado con estado del alumno -->
+      <div class="d-flex justify-content-between align-items-center mb-3">
         <div>
-          <h2 class="h5 mb-1 text-light fw-bold">Jueves: Empuje & Core</h2>
-          <span
-            class="badge bg-success-subtle text-success border border-success"
+          <h2 class="h5 mb-0 text-light fw-bold">Plan Semanal Asignado</h2>
+          <span class="text-secondary small"
+            >Coach Sergio: "Priorizar control escapular"</span
           >
-            <i class="bi bi-patch-check-fill me-1"></i>Membresía Al Día
-          </span>
         </div>
-        <button
-          class="btn btn-sm btn-outline-secondary text-secondary"
-          title="Reiniciar marcas del día"
+        <span
+          class="badge bg-success-subtle text-success border border-success"
         >
-          <i class="bi bi-arrow-counterclockwise"></i> Reiniciar
-        </button>
+          Membresía Al Día
+        </span>
       </div>
 
-      <!-- Bloque 1: Entrada en Calor / Calentamiento -->
-      <div class="custom-card p-3 mb-3">
-        <div class="d-flex justify-content-between align-items-center mb-2">
-          <h6 class="text-warning text-uppercase fw-bold mb-0">
-            <i class="bi bi-fire me-1"></i> 1. Entrada en Calor
-          </h6>
-          <span class="small text-secondary">Articular & Activación</span>
-        </div>
-        <div
-          class="form-check exercise-item d-flex align-items-center justify-content-between"
-        >
-          <div>
-            <input class="form-check-input" type="checkbox" id="cal1" />
-            <label class="form-check-label ms-2 text-light" for="cal1"
-              >Dislocaciones con banda</label
-            >
-          </div>
-          <span class="badge text-bg-dark border border-secondary"
-            >2x15 reps</span
-          >
-        </div>
-        <div
-          class="form-check exercise-item d-flex align-items-center justify-content-between"
-        >
-          <div>
-            <input class="form-check-input" type="checkbox" id="cal2" />
-            <label class="form-check-label ms-2 text-light" for="cal2"
-              >Movilidad de muñecas y codos</label
-            >
-          </div>
-          <span class="badge text-bg-dark border border-secondary">3 mins</span>
-        </div>
-      </div>
+      <p class="text-secondary small mb-4">
+        Seleccioná la jornada planificada por tu coach para desplegar el
+        checklist de ejercicios.
+      </p>
 
-      <!-- Bloque 2: Bloque Principal / Fuerza Calistenia -->
-      <div class="custom-card p-3 mb-3">
-        <div class="d-flex justify-content-between align-items-center mb-2">
-          <h6 class="text-warning text-uppercase fw-bold mb-0">
-            <i class="bi bi-lightning-charge me-1"></i> 2. Fuerza Calistenia
-          </h6>
-          <span class="small text-secondary">Principal</span>
-        </div>
-        <div
-          class="form-check exercise-item d-flex align-items-center justify-content-between"
-        >
-          <div>
-            <input class="form-check-input" type="checkbox" id="fuerza1" />
-            <label class="form-check-label ms-2 text-light" for="fuerza1"
-              >Fondos en paralelas con pausa</label
-            >
+      <!-- Listado de los 5 Días de Rutina -->
+      <div class="d-flex flex-column gap-3">
+        <!-- Día 1: COMPLETADO AUTOMÁTICAMENTE (Todos los ejercicios tildados) -->
+        <div class="custom-card card-completed p-3 day-card position-relative">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <h3 class="h6 text-light fw-bold mb-0">
+                  Día 1: Brazos / Empuje
+                </h3>
+                <span
+                  class="badge bg-secondary-subtle text-secondary font-monospace small"
+                  >Lunes</span
+                >
+              </div>
+              <span class="text-success small fw-semibold">
+                <i class="bi bi-check-circle-fill me-1"></i> Completada (100% de
+                ejercicios)
+              </span>
+            </div>
+            
           </div>
-          <span class="badge text-bg-dark border border-secondary"
-            >4x8 reps</span
-          >
         </div>
-        <div
-          class="form-check exercise-item d-flex align-items-center justify-content-between"
-        >
-          <div>
-            <input class="form-check-input" type="checkbox" id="fuerza2" />
-            <label class="form-check-label ms-2 text-light" for="fuerza2"
-              >Progresión Tuck Planche</label
-            >
-          </div>
-          <span class="badge text-bg-dark border border-secondary"
-            >5x10 seg</span
-          >
-        </div>
-        <div
-          class="form-check exercise-item d-flex align-items-center justify-content-between"
-        >
-          <div>
-            <input class="form-check-input" type="checkbox" id="fuerza3" />
-            <label class="form-check-label ms-2 text-light" for="fuerza3"
-              >Flexiones en pica elevadas</label
-            >
-          </div>
-          <span class="badge text-bg-dark border border-secondary"
-            >3x10 reps</span
-          >
-        </div>
-      </div>
 
-      <!-- Bloque 3: Core y Acondicionamiento -->
-      <div class="custom-card p-3 mb-3">
-        <div class="d-flex justify-content-between align-items-center mb-2">
-          <h6 class="text-warning text-uppercase fw-bold mb-0">
-            <i class="bi bi-shield-shaded me-1"></i> 3. Core & Estabilidad
-          </h6>
-          <span class="small text-secondary">Cierre</span>
-        </div>
-        <div
-          class="form-check exercise-item d-flex align-items-center justify-content-between"
-        >
-          <div>
-            <input class="form-check-input" type="checkbox" id="core1" />
-            <label class="form-check-label ms-2 text-light" for="core1"
-              >Hollow Body Hold</label
-            >
+        <!-- Día 2: DISPONIBLE (Lleva a dia2brazo.html) -->
+        <a href="dia2brazo.html" class="custom-card p-3 day-card">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <h3 class="h6 text-warning fw-bold mb-0">
+                  Día 2: Brazos / Tracción
+                </h3>
+                <span
+                  class="badge bg-secondary-subtle text-secondary font-monospace small"
+                  >Jueves</span
+                >
+              </div>
+              <span class="text-secondary small">
+                Dominadas, Tuck Front Lever y bíceps en anillas
+              </span>
+            </div>
+            <div>
+              <span class="btn btn-sm btn-gold px-3">
+                Entrenar <i class="bi bi-arrow-right ms-1"></i>
+              </span>
+            </div>
           </div>
-          <span class="badge text-bg-dark border border-secondary"
-            >4x30 seg</span
-          >
-        </div>
-        <div
-          class="form-check exercise-item d-flex align-items-center justify-content-between"
-        >
-          <div>
-            <input class="form-check-input" type="checkbox" id="core2" />
-            <label class="form-check-label ms-2 text-light" for="core2"
-              >Elevaciones de piernas en barra</label
-            >
+        </a>
+
+        <!-- Día 3: Enlace a 404.html -->
+        <a href="404.html" class="custom-card p-3 day-card">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <h3 class="h6 text-light fw-bold mb-0">Día 1: Piernas</h3>
+                <span
+                  class="badge bg-secondary-subtle text-secondary font-monospace small"
+                  >Martes</span
+                >
+              </div>
+              <span class="text-secondary small"
+                >Pistol squats, nórdicos y gemelos</span
+              >
+            </div>
+            <div>
+              <i class="bi bi-chevron-right text-secondary fs-5"></i>
+            </div>
           </div>
-          <span class="badge text-bg-dark border border-secondary"
-            >3x12 reps</span
-          >
-        </div>
+        </a>
+
+        <!-- Día 4: Enlace a 404.html -->
+        <a href="404.html" class="custom-card p-3 day-card">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <h3 class="h6 text-light fw-bold mb-0">
+                  Día 3: Flexibilidad & Hombros
+                </h3>
+                <span
+                  class="badge bg-secondary-subtle text-secondary font-monospace small"
+                  >Miércoles</span
+                >
+              </div>
+              <span class="text-secondary small"
+                >Puente, apertura torácica y dislocaciones</span
+              >
+            </div>
+            <div>
+              <i class="bi bi-chevron-right text-secondary fs-5"></i>
+            </div>
+          </div>
+        </a>
+
+        <!-- Día 5: Enlace a 404.html -->
+        <a href="404.html" class="custom-card p-3 day-card">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <h3 class="h6 text-light fw-bold mb-0">
+                  Día 2: Piernas & Core
+                </h3>
+                <span
+                  class="badge bg-secondary-subtle text-secondary font-monospace small"
+                  >Viernes</span
+                >
+              </div>
+              <span class="text-secondary small"
+                >Sentadilla búlgara, saltos al cajón y hollow</span
+              >
+            </div>
+            <div>
+              <i class="bi bi-chevron-right text-secondary fs-5"></i>
+            </div>
+          </div>
+        </a>
       </div>
     </main>
 
