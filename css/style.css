@@ -1,0 +1,82 @@
+:root {
+  --bg-dark: #121417;
+  --bg-card: #1c1f24;
+  --bg-card-hover: #262a30;
+  --accent-gold: #ff9f1c;
+  --accent-hover: #e08b15;
+  --text-muted: #9aa0a6;
+  --border-color: #2e333d;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: #f1f3f5;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar-custom {
+  background-color: #16181d;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.brand-title {
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.brand-badge {
+  font-size: 0.75rem;
+  background-color: var(--accent-gold);
+  color: #121417;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin-left: 8px;
+}
+
+/* Tarjetas y Contenedores */
+.custom-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.custom-card:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-3px);
+}
+
+/* Botones con estilo de la marca */
+.btn-gold {
+  background-color: var(--accent-gold);
+  color: #121417;
+  font-weight: 600;
+  border: none;
+}
+
+.btn-gold:hover {
+  background-color: var(--accent-hover);
+  color: #000;
+}
+
+/* Checklist para alumno estilo Notas */
+.exercise-item {
+  border-bottom: 1px solid var(--border-color);
+  padding: 12px 0;
+}
+
+.exercise-item:last-child {
+  border-bottom: none;
+}
+
+.form-check-input:checked {
+  background-color: var(--accent-gold);
+  border-color: var(--accent-gold);
+}

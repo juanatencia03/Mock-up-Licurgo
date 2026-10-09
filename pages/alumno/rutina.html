@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Rutina - Licurgo Calistenia</title>
+    <!-- Bootstrap 5 CSS e Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar: El logo vuelve al selector de roles -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+      <div class="container-fluid px-3">
+        <a
+          class="navbar-brand d-flex align-items-center"
+          href="../../index.html"
+          title="Volver al Selector de Roles"
+        >
+          <i class="bi bi-shield-shaded text-warning fs-4 me-2"></i>
+          <span class="brand-title">LICURGO</span>
+          <span class="brand-badge">ALUMNO</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navAlumno"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navAlumno">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="rutina.html">
+                <i class="bi bi-check2-square me-1"></i> Mi Rutina
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="membresia.html">
+                <i class="bi bi-credit-card me-1"></i> Mi Membresía
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container py-4" style="max-width: 650px">
+      <!-- Encabezado de Sesión Activa -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h2 class="h5 mb-1 text-light fw-bold">Jueves: Empuje & Core</h2>
+          <span
+            class="badge bg-success-subtle text-success border border-success"
+          >
+            <i class="bi bi-patch-check-fill me-1"></i>Membresía Al Día
+          </span>
+        </div>
+        <button
+          class="btn btn-sm btn-outline-secondary text-secondary"
+          title="Reiniciar marcas del día"
+        >
+          <i class="bi bi-arrow-counterclockwise"></i> Reiniciar
+        </button>
+      </div>
+
+      <!-- Bloque 1: Entrada en Calor / Calentamiento -->
+      <div class="custom-card p-3 mb-3">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <h6 class="text-warning text-uppercase fw-bold mb-0">
+            <i class="bi bi-fire me-1"></i> 1. Entrada en Calor
+          </h6>
+          <span class="small text-secondary">Articular & Activación</span>
+        </div>
+        <div
+          class="form-check exercise-item d-flex align-items-center justify-content-between"
+        >
+          <div>
+            <input class="form-check-input" type="checkbox" id="cal1" />
+            <label class="form-check-label ms-2 text-light" for="cal1"
+              >Dislocaciones con banda</label
+            >
+          </div>
+          <span class="badge text-bg-dark border border-secondary"
+            >2x15 reps</span
+          >
+        </div>
+        <div
+          class="form-check exercise-item d-flex align-items-center justify-content-between"
+        >
+          <div>
+            <input class="form-check-input" type="checkbox" id="cal2" />
+            <label class="form-check-label ms-2 text-light" for="cal2"
+              >Movilidad de muñecas y codos</label
+            >
+          </div>
+          <span class="badge text-bg-dark border border-secondary">3 mins</span>
+        </div>
+      </div>
+
+      <!-- Bloque 2: Bloque Principal / Fuerza Calistenia -->
+      <div class="custom-card p-3 mb-3">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <h6 class="text-warning text-uppercase fw-bold mb-0">
+            <i class="bi bi-lightning-charge me-1"></i> 2. Fuerza Calistenia
+          </h6>
+          <span class="small text-secondary">Principal</span>
+        </div>
+        <div
+          class="form-check exercise-item d-flex align-items-center justify-content-between"
+        >
+          <div>
+            <input class="form-check-input" type="checkbox" id="fuerza1" />
+            <label class="form-check-label ms-2 text-light" for="fuerza1"
+              >Fondos en paralelas con pausa</label
+            >
+          </div>
+          <span class="badge text-bg-dark border border-secondary"
+            >4x8 reps</span
+          >
+        </div>
+        <div
+          class="form-check exercise-item d-flex align-items-center justify-content-between"
+        >
+          <div>
+            <input class="form-check-input" type="checkbox" id="fuerza2" />
+            <label class="form-check-label ms-2 text-light" for="fuerza2"
+              >Progresión Tuck Planche</label
+            >
+          </div>
+          <span class="badge text-bg-dark border border-secondary"
+            >5x10 seg</span
+          >
+        </div>
+        <div
+          class="form-check exercise-item d-flex align-items-center justify-content-between"
+        >
+          <div>
+            <input class="form-check-input" type="checkbox" id="fuerza3" />
+            <label class="form-check-label ms-2 text-light" for="fuerza3"
+              >Flexiones en pica elevadas</label
+            >
+          </div>
+          <span class="badge text-bg-dark border border-secondary"
+            >3x10 reps</span
+          >
+        </div>
+      </div>
+
+      <!-- Bloque 3: Core y Acondicionamiento -->
+      <div class="custom-card p-3 mb-3">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <h6 class="text-warning text-uppercase fw-bold mb-0">
+            <i class="bi bi-shield-shaded me-1"></i> 3. Core & Estabilidad
+          </h6>
+          <span class="small text-secondary">Cierre</span>
+        </div>
+        <div
+          class="form-check exercise-item d-flex align-items-center justify-content-between"
+        >
+          <div>
+            <input class="form-check-input" type="checkbox" id="core1" />
+            <label class="form-check-label ms-2 text-light" for="core1"
+              >Hollow Body Hold</label
+            >
+          </div>
+          <span class="badge text-bg-dark border border-secondary"
+            >4x30 seg</span
+          >
+        </div>
+        <div
+          class="form-check exercise-item d-flex align-items-center justify-content-between"
+        >
+          <div>
+            <input class="form-check-input" type="checkbox" id="core2" />
+            <label class="form-check-label ms-2 text-light" for="core2"
+              >Elevaciones de piernas en barra</label
+            >
+          </div>
+          <span class="badge text-bg-dark border border-secondary"
+            >3x12 reps</span
+          >
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
